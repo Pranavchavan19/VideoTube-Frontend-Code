@@ -13,7 +13,7 @@ import SearchVideos from "./SearchVideos";
 
 import ChannelPlaylist from "./Channel/ChannelPlaylist";
 import TermsAndConditions from "./TermsAndConditions.jsx"
-
+import SettingPage from "./SettingPage.jsx";
 
 export {
     Channel,
@@ -29,5 +29,6 @@ export {
     VideoDetail,
     SearchVideos,
     TermsAndConditions,
-    ChannelPlaylist
+    ChannelPlaylist,
+    SettingPage
 }

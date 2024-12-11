@@ -12,6 +12,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { IoMdLogOut } from "react-icons/io";
 import { userLogout } from "../../Store/Slices/authSlice";
+// import goToSettingPage from "../../pages/SettingPage.jsx"
 
 function Sidebar() {
     const dispatch = useDispatch();
@@ -71,11 +72,16 @@ function Sidebar() {
             title: "Subscriptions",
             url: "/subscriptions",
         },
+        
     ];
 
     const logout = async () => {
          dispatch(userLogout());
         navigate("/");
+    };
+
+    const goToSettingPage = () => {
+        navigate("/settings");  // Navigate to the settings page
     };
 
     return (
@@ -113,7 +119,9 @@ function Sidebar() {
                                 </span>
                             </div>
                         )}
-                        <div className="flex items-center gap-2 justify-center sm:justify-start hover:bg-purple-500 cursor-pointer py-1 px-2 border border-slate-600">
+                        <div className=" flex items-center gap-2 justify-center sm:justify-start hover:bg-purple-500 cursor-pointer py-1 px-2 border border-slate-600 "
+                        onClick={goToSettingPage}  // Navigate to setting
+                        >
                             <CiSettings size={25} />
                             <span className="text-base hidden md:block">
                                 Settings

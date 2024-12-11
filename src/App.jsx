@@ -19,6 +19,7 @@ import {
     SearchVideos,
     TermsAndConditions,
     ChannelPlaylist,
+    SettingPage
 } from "./pages";
 import { EditPersonalInfo, ChangePassword, Layout } from "./components";
 
@@ -119,6 +120,7 @@ function App() {
                             </AuthLayout>
                         }
                     />
+                     <Route path="/settings" element={<SettingPage />} />
                     <Route
                         path="/edit"
                         element={
