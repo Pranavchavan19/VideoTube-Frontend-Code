@@ -21,10 +21,17 @@ function Navbar() {
     const profileImg = useSelector((state) => state.auth.userData?.avatar.url);
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const [clicked, setClicked] = useState(false);
 
     const logout = async () => {
         await dispatch(userLogout());
         navigate("/");
+    };
+    const profileloginToCurrentUser = () => {
+        
+        navigate("/Mycontent");  // Navigate to the settings page
+        setClicked(true);
+       
     };
 
     const sidePanelItems = [
@@ -71,9 +78,11 @@ function Navbar() {
                 {authStatus ? (
                     <div className="rounded-full sm:block hidden">
                         <img
-                            src={profileImg}
+                            src={profileImg }
+                            onClick={profileloginToCurrentUser} 
                             alt="profileImg"
-                            className="rounded-full w-10 h-10 object-cover"
+                            // className="rounded-full w-10 h-10 object-cover cursor-pointer"
+                            className={`rounded-full w-10 h-10 object-cover cursor-pointer ${clicked ? 'hover:opacity-80' : ''}`} 
                         />
                     </div>
                 ) : (

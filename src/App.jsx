@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Outlet, Route, Routes } from "react-router-dom";
 import { AuthLayout, Login, Signup } from "./components/index";
 import { Toaster } from "react-hot-toast";
 import { useDispatch } from "react-redux";
@@ -121,6 +121,11 @@ function App() {
                         }
                     />
                      <Route path="/settings" element={<SettingPage />} />
+                     <Route path="/Mycontent" element={
+                            <AuthLayout authentication>
+                                <EditChannel />
+                            </AuthLayout>
+                        } />
                     <Route
                         path="/edit"
                         element={
