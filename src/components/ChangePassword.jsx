@@ -3,6 +3,8 @@ import { Input2, Button } from "../components";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { changePassword } from "../Store/Slices/authSlice.js"
+
+
 function ChangePassword() {
     const {
         handleSubmit,

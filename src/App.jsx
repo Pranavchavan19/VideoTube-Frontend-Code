@@ -19,9 +19,11 @@ import {
     SearchVideos,
     TermsAndConditions,
     ChannelPlaylist,
-    SettingPage
+    SettingPage,
+    ChangePasswordPage
+    
 } from "./pages";
-import { EditPersonalInfo, ChangePassword, Layout } from "./components";
+import { EditPersonalInfo, ChangePassword, Layout} from "./components";
 
 function App() {
     const dispatch = useDispatch();
@@ -120,7 +122,11 @@ function App() {
                             </AuthLayout>
                         }
                     />
-                     <Route path="/settings" element={<SettingPage />} />
+                     
+                           <Route path="/settings" element={<SettingPage />} />
+                           <Route path="/change-password" element={<ChangePasswordPage />} />
+                    
+                     {/* <Route path="/settings" element={<ChangePass />} /> */}
                      <Route path="/Mycontent" element={
                             <AuthLayout authentication>
                                 <EditChannel />
@@ -150,6 +156,7 @@ function App() {
                                 </AuthLayout>
                             }
                         />
+                        {/* <Route path="/change-password" element={<ChangePassword />} /> */}
                     </Route>
                 </Route>
                 <Route

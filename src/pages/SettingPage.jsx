@@ -5,6 +5,11 @@ import Container from "../components/Container.jsx";
 function SettingPage() {
     const navigate = useNavigate();
 
+    // Navigate to Change Password Page
+    const goToChangePasswordPage = () => {
+        navigate("/change-password"); // Ensure this route is defined in your router
+    };
+
     const goToSettingPage = () => {
         navigate("/setting");
     };
@@ -30,7 +35,7 @@ function SettingPage() {
                             <span>Change Password</span>
                             <button 
                                 className="text-blue-500" 
-                                onClick={goToSettingPage}
+                                onClick={goToChangePasswordPage}
                             >
                                 Change
                             </button>

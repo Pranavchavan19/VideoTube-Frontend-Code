@@ -10,11 +10,11 @@ import LikedVideos from "./LikedVideos";
 import MySubscriptions from "./MySubscriptions";
 import VideoDetail from "./VideoDetail";
 import SearchVideos from "./SearchVideos";
-
+import { ChangePassword } from "../components/index.js";
 import ChannelPlaylist from "./Channel/ChannelPlaylist";
 import TermsAndConditions from "./TermsAndConditions.jsx"
-import SettingPage from "./SettingPage.jsx";
-
+import SettingPage from "./SettingPage.jsx"
+import ChangePasswordPage from "./ChangePasswordPage.jsx";
 export {
     Channel,
     ChannelSubscribers,
@@ -30,5 +30,8 @@ export {
     SearchVideos,
     TermsAndConditions,
     ChannelPlaylist,
-    SettingPage
+    SettingPage,
+    ChangePassword,
+    ChangePasswordPage
+    
 }
