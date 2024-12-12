@@ -48,6 +48,7 @@ export { Button, Container, Input, Login, Navbar, Search, Sidebar, Logo , Channe
     EditPersonalInfo,
     Layout,
     EditAvatar,SearchForSmallScreen,
-    Avatar,
+    Avatar
+    
     
 };

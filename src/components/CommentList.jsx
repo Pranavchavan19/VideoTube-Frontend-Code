@@ -13,7 +13,8 @@ function CommentList({
     content,
     commentId,
     isLiked,
-    likesCount,
+    likesCount=0
+    
 }){
     const avatar2 = useSelector((state) => state.auth?.userData?.avatar.url);
     const authUsername = useSelector( (state) => state.auth?.userData?.username);
@@ -149,6 +150,9 @@ function CommentList({
                          commentId={commentId}
                          size={17}
                     />
+                    
+                    
+                    
                 </div>
            </div>
         </>
