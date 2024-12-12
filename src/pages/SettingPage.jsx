@@ -14,6 +14,10 @@ function SettingPage() {
         navigate("/setting");
     };
 
+    const profileUpdate = () => {
+        navigate("/edit-profile")
+    };
+
     return (
         <Container>
             <div className="text-white bg-gray-900 p-4 max-w-screen-lg mx-auto">
@@ -26,7 +30,7 @@ function SettingPage() {
                             <span>Profile</span>
                             <button 
                                 className="text-blue-500" 
-                                onClick={goToSettingPage}
+                                onClick={profileUpdate}
                             >
                                 Edit
                             </button>

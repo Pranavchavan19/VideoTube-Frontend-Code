@@ -2,7 +2,7 @@ import React from "react";
 import {Logo , Button ,Input} from "./index.js"
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { createAccount, userLogin } from "../store/Slices/authSlice.js";
+import { createAccount, userLogin } from "../Store/Slices/authSlice.js";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import LoginSkeleton from "../skeleton/loginSkeleton.jsx";

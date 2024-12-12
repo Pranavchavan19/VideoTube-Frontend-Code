@@ -62,6 +62,7 @@ function App() {
                                 <Channel />
                             </AuthLayout>
                         }
+
                     >
                         <Route
                             path="videos"
@@ -76,8 +77,10 @@ function App() {
                             element={
                                 <AuthLayout authentication>
                                     <ChannelPlaylist />
+                                    
                                 </AuthLayout>
                             }
+                            
                         />
 
                         
@@ -85,9 +88,11 @@ function App() {
                             path="tweets"
                             element={
                                 <AuthLayout authentication>
-                                    <ChannelTweets />
+                                    <ChannelTweets />                                  
                                 </AuthLayout>
+                                
                             }
+                            
                         />
                         <Route
                             path="subscribed"
@@ -97,6 +102,7 @@ function App() {
                                 </AuthLayout>
                             }
                         />
+                         {/* <Route path="/channel/:username" element={<AuthLayout authentication><Channel /></AuthLayout>} /> */}
                     </Route>
                     <Route
                         path="/history"
@@ -125,7 +131,8 @@ function App() {
                      
                            <Route path="/settings" element={<SettingPage />} />
                            <Route path="/change-password" element={<ChangePasswordPage />} />
-                    
+                           <Route path="/edit-profile" element={<EditPersonalInfo />} />
+                           <Route path="/channel/:username" element={<Channel />} />
                      {/* <Route path="/settings" element={<ChangePass />} /> */}
                      <Route path="/Mycontent" element={
                             <AuthLayout authentication>
@@ -136,7 +143,7 @@ function App() {
                         path="/edit"
                         element={
                             <AuthLayout authentication>
-                                <EditChannel />
+                                <EditChannel  />
                             </AuthLayout>
                         }
                     >
@@ -156,8 +163,8 @@ function App() {
                                 </AuthLayout>
                             }
                         />
-                        {/* <Route path="/change-password" element={<ChangePassword />} /> */}
-                    </Route>
+                         {/* <Route path="/change-password" element={<ChangePassword />} /> */}
+                     </Route>
                 </Route>
                 <Route
                     path="/login"
@@ -221,3 +228,8 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
