@@ -12,7 +12,6 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { IoMdLogOut } from "react-icons/io";
 import { userLogout } from "../../Store/Slices/authSlice";
-// import goToSettingPage from "../../pages/SettingPage.jsx"
 
 function Sidebar() {
     const dispatch = useDispatch();

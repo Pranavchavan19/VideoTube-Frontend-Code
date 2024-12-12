@@ -12,6 +12,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import { IoMdLogOut } from "react-icons/io";
 import { userLogout } from "../../Store/Slices/authSlice.js";
+import {IoMdSettings} from "react-icons/io"
+const goToSettingPage = () => {
+    navigate("/settings");  // Navigate to the settings page
+};
+
 
 function Navbar() {
     const [toggleMenu, setToggleMenu] = useState(false);
@@ -146,7 +151,7 @@ function Navbar() {
                                 ))}
                             </div>
 
-                            {!authStatus ? (
+                            {!authStatus ? ( <>
                                 <div className="flex flex-col space-y-5 mb-3">
                                     <Link to={"/login"}>
                                         <Button className="w-full bg-[#222222] border hover:bg-white hover:text-black border-slate-500 py-1 px-3">
@@ -158,15 +163,44 @@ function Navbar() {
                                             Sign up
                                         </Button>
                                     </Link>
+                                    <Link to={"/settings"}>
+                                        <Button className=" w-full font-semibold border border-slate-500 hover:bg-white hover:text-black py-1 px-3">
+                                            Setting
+                                        </Button>
+                                    </Link>
+                                    
                                 </div>
+                                
+                                </>
                             ) : (
-                                <div
-                                    className="flex gap-2 justify-start items-start cursor-pointer py-1 px-2 border border-slate-600"
-                                    onClick={() => logout()}
-                                >
-                                    <IoMdLogOut size={25} />
-                                    <span className="text-base">Logout</span>
-                                </div>
+                                <>
+                               
+                                    <div className="flex flex-col gap-2 pb-4">
+                                    <div
+                                       className="flex gap-2 justify-start items-start cursor-pointer py-1 px-2 border border-slate-600"
+                                        onClick={() => logout()}
+                                        >
+                                        <IoMdLogOut size={25} />
+                                         <span className="text-base">Logout</span>
+                                     </div>
+
+                                     <div
+                                       className="flex gap-2 justify-start items-start cursor-pointer py-1 px-2 border border-slate-600"
+                                        >
+                                            <IoMdSettings size={25} />
+                                        
+                                         <span className="text-base">
+                                         <Link to={"/settings"}>
+                                        <Button  >
+                                            Setting
+                                        </Button>
+                                         </Link>
+                                         </span>
+                                     </div>
+                                    </div>
+                                </>
+                                
+                                
                             )}
                         </div>
                     </div>
