@@ -150,9 +150,6 @@ function CommentList({
                          commentId={commentId}
                          size={17}
                     />
-                    
-                    
-                    
                 </div>
            </div>
         </>
